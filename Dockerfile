@@ -29,7 +29,19 @@ RUN \
 	deluge-web \
 	p7zip-full \
 	unrar \
-	unzip && \
+	unzip \
+	libssl1.0.0 \
+	openssl && \
+ echo "**** install build deps ****" && \
+ apt-get install -y \
+	libssl-dev \
+	python-dev \
+	build-essential \
+	libffi-dev \
+	python-pip && \
+ echo "**** install pip packages ****" && \
+ pip install --no-cache-dir -U \
+	requests && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
