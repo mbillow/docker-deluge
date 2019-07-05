@@ -29,9 +29,7 @@ RUN \
 	deluge-web \
 	p7zip-full \
 	unrar \
-	unzip \
-	libssl1.0.0 \
-	openssl && \
+	unzip && \
  echo "**** install build deps ****" && \
  apt-get install -y \
 	libssl-dev \
